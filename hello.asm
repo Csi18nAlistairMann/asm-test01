@@ -15,9 +15,8 @@ _start:   mov       rax, 1                  ; system call for write
           syscall                           ; invoke operating system to do the write                                                                  
 
           mov       rax, 60                 ; system call for exit                                                                                     
-          mov       rdi, 10
           xor       rdi, rdi                ; exit code 0                                                                                              
           syscall                           ; invoke operating system to exit                                                                          
 
           section   .data
-message:  db        "Hello World", 10       ; note the newline at the end                                                                              
+message:  db        "Hello World", 10       ; note the newline at the end
